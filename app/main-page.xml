@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <ListView items="{{ source }}" >
+        <ListView.itemTemplate>
+            <StackLayout>
+                <GridLayout rows="* auto" columns="100 *">
+                    <ActivityIndicator row="0" rowSpan="2" col="0" busy="true"/>
+                    <Image row="0" rowSpan="2" col="0" src="{{imageSource.imageSource}}"/>
+                    <Label text="{{title}}" row="0" col="1" font-size="25px" textWrap="true"/>
+                    <Label text="{{ datetime | dateConverter(dateFormat) }}" row="1" col="1" font-size="18px" textWrap="true"/>
+                </GridLayout>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+  </StackLayout>
+</Page>
